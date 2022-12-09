@@ -8,6 +8,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+- Deployed front and back ends that talk to each other
+- Use of the `useContext` hook somewhere in your app
+- Use of at least one custom hook somewhere in your app

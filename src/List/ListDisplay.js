@@ -20,7 +20,7 @@ const ListDisplay = () => {
                 {list.map((listItem) => (
                     <ListItem
                         listItem={{...listItem}}
-                        key={listItem.id}
+                        key={listItem.item_id}
                     />
                 ))}
             </ol>

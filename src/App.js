@@ -15,7 +15,9 @@ function App() {
 
 
   // This will be used to fetch from the backend
-  useFetch()
+  const [data] = useFetch('https://shopping-list-hack.onrender.com/api/shopping')
+  if (data !== "") {
+  setList(data)}
 
   return (
     // Provides context to child components

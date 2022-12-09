@@ -16,14 +16,14 @@ const ListDisplay = () => {
     // Passes down entire object as props
     return (
         <div>
-            <list>
+            <ol>
                 {list.map((listItem) => (
                     <ListItem
                         listItem={{...listItem}}
                         key={listItem.id}
                     />
                 ))}
-            </list>
+            </ol>
         </div>
 
     )

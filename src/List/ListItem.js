@@ -5,9 +5,9 @@ import './listitem.css'
 const ListItem = ({listItem}) => {
     return (
         <div className='listitem'>
-            <li>{listItem.item}</li>
-            <input type="checkbox" id="completed?"></input>
-            <label for="completed?">Completed(Y/N)</label>
+            <li>{`${listItem.item}: `}</li>
+            <label className="check" htmlFor="completed?">Completed(Y/N)</label>
+            <input type="checkbox" id="completed?" className="check"></input>
         </div>
     )
 }

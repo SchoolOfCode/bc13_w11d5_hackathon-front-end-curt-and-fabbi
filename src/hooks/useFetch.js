@@ -1,9 +1,10 @@
 // fetching backend
-import {useState, useEffect} from 'react'
+import { useEffect, useState} from 'react'
 
 function useFetch(url) {
-    const [data, setData]= useState("");
+    const [list, setList] = useState([])
 
+      
     useEffect(() => {
         if (url === "") {
             return;
@@ -13,13 +14,14 @@ function useFetch(url) {
             method: "GET",
             headers: { Accept: "application/json"}, 
         })
-        const list = await response.json();
-        setData(list);
+        const data = await response.json();
+        console.log(data)
+        setList(data.payload);
     };
     getPosts();
 }, [url])
 
-return [data]
+return [list]
 }
 
 export default useFetch;

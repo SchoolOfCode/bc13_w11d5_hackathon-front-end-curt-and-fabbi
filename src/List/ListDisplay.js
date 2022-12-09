@@ -3,11 +3,19 @@
 // useContext hook used here
 
 import React from 'react'
+import ListItem from './ListItem';
 
-const ListDisplay = () => {
+const ListDisplay = ({list}) => {
     return (
         <div>
-            <list></list>
+            <list>
+                {list.map((listItem) => (
+                    <ListItem
+                        listItem={{...listItem}}
+                        key={listItem.id}
+                    />
+                ))}
+            </list>
         </div>
     )
 }

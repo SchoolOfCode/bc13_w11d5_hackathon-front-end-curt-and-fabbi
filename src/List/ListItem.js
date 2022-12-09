@@ -1,10 +1,13 @@
 import React from 'react'
 
-const ListItem = () => {
+//state for the checkbox?
+
+const ListItem = ({listItem}) => {
     return (
         <div>
-            <li></li>
-            <checkbox></checkbox>
+            <li>{listItem.item}</li>
+            <input type="checkbox" id="completed?" checked={false}></input>
+            <label for="completed?">Completed?</label>
         </div>
     )
 }

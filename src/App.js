@@ -2,9 +2,9 @@ import './App.css';
 import Input from './Input/Input';
 import ListDisplay from './List/ListDisplay';
 import useFetch from './hooks/useFetch'
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
 // Imposting sample data
-import sampleList from './sampleList';
+// import sampleList from './sampleList';
 // exports context to be imported into other files
 export const listContext = createContext()
 

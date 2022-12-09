@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Input from './Input/Input';
+import ListDisplay from './List/ListDisplay';
+import useFetch from './hooks/useFetch'
+import { createContext, useState } from 'react'
+// Imposting sample data
+import sampleList from './sampleList';
+// exports context to be imported into other files
+export const listContext = createContext()
 
 function App() {
+
+  // List state - currently taking from a set list but will fetch from backend
+  const [list, setList] = useState(sampleList)
+
+
+  // This will be used to fetch from the backend
+  useFetch()
+
   return (
+    // Provides context to child components
+    <listContext.Provider value={list}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Shopping List!</h1>
+      <Input/>
+      <ListDisplay/>
     </div>
+    </listContext.Provider>
   );
 }
 

@@ -11,6 +11,7 @@ const Input = () => {
 
     function handleClick() {
         // on click send current text, and a default completed state of false to the API.
+        setText("")
     }
 
     return (

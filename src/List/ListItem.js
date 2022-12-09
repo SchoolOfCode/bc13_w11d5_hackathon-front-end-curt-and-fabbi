@@ -1,13 +1,13 @@
 import React from 'react'
-
+import './listitem.css'
 //state for the checkbox?
 
 const ListItem = ({listItem}) => {
     return (
-        <div>
+        <div className='listitem'>
             <li>{listItem.item}</li>
-            <input type="checkbox" id="completed?" checked={false}></input>
-            <label for="completed?">Completed?</label>
+            <input type="checkbox" id="completed?"></input>
+            <label for="completed?">Completed(Y/N)</label>
         </div>
     )
 }

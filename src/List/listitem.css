@@ -1,0 +1,12 @@
+.listitem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.check {
+    padding-left: 3px;
+    padding-right: 3px;
+}
